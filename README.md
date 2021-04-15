@@ -22,6 +22,12 @@ When you copy a file in the current directory, in docker you need ./, not simply
 For example, change
 COPY bash srcs/myfile.sh .
 RUN sudo bash myfile.sh
-in 
+in
 COPY bash srcs/myfile.sh ./
 RUN bash myfile.sh
+
+5. E: Unsupported file /xxx given on commandline 
+Possible causes:
+You left an unwanted \ in the line preceding this command
+Your file extension is not corrected (for example you're doing bash for a file who is not .sh)
+There is a typoo inside your file
