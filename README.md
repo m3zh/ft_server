@@ -1,8 +1,25 @@
 # FT_SERVER on LINUX
 
+## Docker commands
+
+```
+    docker ps -a # shows all containers, their ids, names,...
+    docker images # shows all images
+    docker container stop <id>
+    docker container rm <id>
+    docker container prune # remove all stopped containers
+    docker image prune # remove all images of stopped containers
+    docker build . # build your image (whose id is shown on the last line after a successful built)
+    docker run -p 80:80 -p 443:443 <image_id> # -p stands for ports
+    docker run -it -p 80:80 -p 443:443 <image_id> # -it stands for interactive
+    docker exec -it <container_name> /bin/bash # to open docker in bash mode and see what's inside the container
+    docker run exec <container_name> bash /somescript.sh # to run a script inside the container when it is already running,
+                                                         without stopping it [NB: the script.sh must be already inside the container, look up COPY command]
+```
+
 ## Errors and solutions:
 
-1. `permission denied while trying to connect to the Docker daemon socket at unix`
+1. `Permission denied while trying to connect to the Docker daemon socket at unix`
 
 ```
     sudo groupadd docker
