@@ -1,4 +1,4 @@
-# FT_SERVER on LINUX
+# FT_SERVER on LINUX 🐳
 
 ## Docker commands
 
@@ -64,3 +64,12 @@
   You left an unwanted \ in the line preceding this command  
   Your file extension is not corrected (for example you're doing bash for a file who is not .sh)  
   There is a typoo inside your file
+
+## How to run this specific docker container
+
+```
+  docker build .
+  docker run -p 80:80 -p 443:443 <image_id> # to stop it, run docker container stop <id> in a new terminal
+  docker run -it -p 80:80 -p 443:443 <image_id> # to stop it, press ctrl+D
+  docker run exec <container_name> bash /autoindex_off.sh # if autoindex is off, your localhost will throw an error "Not found" (usually 403 forbidden)
+```
