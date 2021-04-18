@@ -43,9 +43,9 @@
 
 4. `The command '/bin/sh -c ...' returned a non-zero code: 127`  
   
-  It means docker didn't find a file or a folder.
-  Never use sudo inside docker.
-  When you copy a file in the current directory, in docker you need ./, not simply .
+  It means docker didn't find a file or a folder.  
+  Never use sudo inside docker.  
+  When you copy a file in the current directory, in docker you need ./, not simply .  
   For example, change
 ```
   COPY bash srcs/myfile.sh .
