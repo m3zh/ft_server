@@ -1,6 +1,6 @@
 # FT_SERVER on LINUX 🐳
 
-[tutorial] (https://csnotes.medium.com/ft-server-tutorial-42-project-438e0b09975e)
+[[ tutorial ]](csnotes.medium.com/ft-server-tutorial-42-project-438e0b09975e)
 
 ## Docker commands
 
